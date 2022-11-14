@@ -1,6 +1,7 @@
 # Fetch Rewards Backend Take Home Test
 
-This is Ahoura's submission for the Fetch Rewards Backend Test.
+This is Ahoura's submission for the Fetch Rewards Backend Test. This repo has also been uploaded to Replit which would allow you to test without having to download it on your computer.
+https://replit.com/@ahoura-m/Fetch-Rewards-Backend-Take-Home-Test#controllers/mainController.js
 
 ## Getting Started
 
