@@ -32,7 +32,9 @@ The following is the diagram outlining the flow of the application and testing m
 ![image](https://user-images.githubusercontent.com/102436343/201732377-3b42b893-ae79-496a-a86e-d2069d04a601.png)
 
 
+
 ### Add Transaction
+
 
 **POST** [http://localhost:3000/add-tx](http://localhost:3000/add-tx)
 
@@ -41,7 +43,9 @@ The following is the diagram outlining the flow of the application and testing m
 ![image](https://user-images.githubusercontent.com/102436343/201731377-d361b013-35e9-48e7-94d1-e8123679912f.png)
 
 
+
 ### Spend
+
 
 **POST** [http://localhost:3000/spend](http://localhost:3000/spend)
 
@@ -50,7 +54,8 @@ The following is the diagram outlining the flow of the application and testing m
 ![image](https://user-images.githubusercontent.com/102436343/201731922-f151d6c1-0d9c-4b47-86f9-0cf6b9b1b616.png)
 
 
-## Balance
+### Balance
+
 
 **GET** [http://localhost:3000/balance](http://localhost:3000/add-tx)
 
