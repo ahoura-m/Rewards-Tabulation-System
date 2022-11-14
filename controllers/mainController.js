@@ -85,8 +85,6 @@ exports.addTx = async (req,res) => {
                 }
             }
         }
-        console.log("tx history: ",txHistory)
-        console.log("Points AR:  ", pointsAR)
         res.json(txHistory)
     } catch (error) {
         res.status(500).send({message: error.message || "Error Occured"})
@@ -127,8 +125,6 @@ exports.spend = async (req,res) => {
                 pointsAR[i]["points"] = 0
             }
         }
-        console.log("tx history: ",txHistory)
-        console.log("Points AR:  ", pointsAR)
         res.json(outputArr)
     } catch (error) {
         res.status(500).send({message: error.message || "Error Occured"})
