@@ -24,6 +24,7 @@ The API provides routes that:
 ## Example:
 
 Suppose you call your add transaction route with the following sequence of calls:
+  
 ● { "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }
 ● { "payer": "UNILEVER", "points": 200, "timestamp": "2022-10-31T11:00:00Z" }
 ● { "payer": "DANNON", "points": -200, "timestamp": "2022-10-31T15:00:00Z" }
