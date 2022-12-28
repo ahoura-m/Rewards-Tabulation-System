@@ -1,6 +1,6 @@
-# Fetch Rewards Backend Test
+# API designed to keep track of a users points
 
-This is an API designed to keep track of a user's points per payer.
+This is an API designed to keep track of a user's points per payer and allow the user to spend their points.
 
 ## Background:
 
@@ -76,10 +76,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/ahoura-m/Fetch-Rewards-Backend-Take-Home-Test.git
+$ git clone https://github.com/ahoura-m/Rewards-Tabulation-System.git
 
 # Go into the repository
-$ cd Fetch-Rewards-Backend-Take-Home-Test
+$ cd Rewards-Tabulation-System
 
 # Install dependencies
 $ npm install
