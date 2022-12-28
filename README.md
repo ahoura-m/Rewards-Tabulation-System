@@ -23,7 +23,9 @@ The API provides routes that:
 
 ## Example:
 
+  
 Suppose you call your add transaction route with the following sequence of calls:
+  
   
 ● { "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }
 ● { "payer": "UNILEVER", "points": 200, "timestamp": "2022-10-31T11:00:00Z" }
@@ -31,20 +33,26 @@ Suppose you call your add transaction route with the following sequence of calls
 ● { "payer": "MILLER COORS", "points": 10000, "timestamp": "2022-11-01T14:00:00Z" }
 ● { "payer": "DANNON", "points": 1000, "timestamp": "2022-11-02T14:00:00Z" }
 
+  
 Then you call your spend points route with the following request:
 
+  
 { "points": 5000 }
 
+  
 The expected response from the spend call would be (since Dannon had a previous spend record):
 
+  
 [
 { "payer": "DANNON", "points": -100 },
 { "payer": "UNILEVER", "points": -200 },
 { "payer": "MILLER COORS", "points": -4,700 }
 ]
 
+  
 A subsequent call to the points balance route, after the spend, should returns the following results:
 
+  
 {
 "DANNON": 1000,
 ”UNILEVER” : 0, ,
