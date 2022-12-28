@@ -21,7 +21,7 @@ The API provides routes that:
 ● Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
 ● Return all payer point balances.
 
-##Example:
+## Example:
 
 Suppose you call your add transaction route with the following sequence of calls:
 ● { "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }
