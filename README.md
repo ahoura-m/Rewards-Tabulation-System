@@ -38,6 +38,7 @@ Suppose you call your add transaction route with the following sequence of calls
 ● { "payer": "DANNON", "points": 1000, "timestamp": "2022-11-02T14:00:00Z" }
 
   
+  
 Then you call your spend points route with the following request:
 
   
