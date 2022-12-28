@@ -1,7 +1,55 @@
-# Fetch Rewards Backend Take Home Test
+# Fetch Rewards Backend Test
 
-This is Ahoura's submission for the Fetch Rewards Backend Test. This repo has also been uploaded to Replit which would allow you to test without having to install the prerequisites.
-https://replit.com/@ahoura-m/Fetch-Rewards-Backend-Take-Home-Test#controllers/mainController.js
+This is an API designed to keep track of a user's points per payer.
+
+## Background:
+
+Our users have points in their accounts. Users only see a single balance in their accounts. But for reporting purposes we actually track their points per
+payer/partner. In our system, each transaction record contains: payer (string), points (integer), timestamp (date).
+
+For earning points it is easy to assign a payer, we know which actions earned the points. And thus which partner should be paying for the points.
+
+When a user spends points, they don't know or care which payer the points come from. But, our accounting team does care how the points are spent.
+
+There are two rules for determining what points to "spend" first:
+● We want the oldest points to be spent first (oldest based on transaction timestamp, not the order they’re received)
+● We want no payer's points to go negative.
+
+The API provides routes that:
+
+● Add transactions for a specific payer and date.
+● Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
+● Return all payer point balances.
+
+##Example:
+
+Suppose you call your add transaction route with the following sequence of calls:
+● { "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }
+● { "payer": "UNILEVER", "points": 200, "timestamp": "2022-10-31T11:00:00Z" }
+● { "payer": "DANNON", "points": -200, "timestamp": "2022-10-31T15:00:00Z" }
+● { "payer": "MILLER COORS", "points": 10000, "timestamp": "2022-11-01T14:00:00Z" }
+● { "payer": "DANNON", "points": 1000, "timestamp": "2022-11-02T14:00:00Z" }
+
+Then you call your spend points route with the following request:
+
+{ "points": 5000 }
+
+The expected response from the spend call would be (since Dannon had a previous spend record):
+
+[
+{ "payer": "DANNON", "points": -100 },
+{ "payer": "UNILEVER", "points": -200 },
+{ "payer": "MILLER COORS", "points": -4,700 }
+]
+
+A subsequent call to the points balance route, after the spend, should returns the following results:
+
+{
+"DANNON": 1000,
+”UNILEVER” : 0, ,
+"MILLER COORS": 5300
+}
+
 
 ## Getting Started
 
